@@ -1,4 +1,9 @@
 pipeline {
+    environtment {
+        registry = "kkoelly/jenkins-calculator"
+	registryCredential = 'dockerhub'
+	dockerImage = ''
+    }
     agent any
     stages {
         stage ('build') {
@@ -18,3 +23,4 @@ pipeline {
         }
     }
 }
+
